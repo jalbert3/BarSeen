@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Signin Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src=" with?https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <form class="form-signin" role="form">
+        <h2 class="form-signin-heading">Your name?</h2>
+        <input type="text" class="form-control" placeholder="Name" required autofocus>
+      </br>
+        <h2>How many people are you with?</h2>
+        <input type="range" min="1" max="5" value="1" step="1" onchange="showValue(this.value)" /> 
+        <span id="rangePeople">1</span> People/Person
+      </br>
+      <h2>How many drinks do you plan on having?</h2>
+        <input type="range" min="0" max="10" value="0" step="1" onchange="showValueDrinks(this.value)" /> 
+        <span id="rangeDrinks">1</span> Drink(s)
+       <h2>How long will you be staying?</h2>
+        <input type="range" min="0" max="12" value="0" step="1" onchange="showDuration(this.value)" /> 
+        <span id="rangeDuration">1</span> Hour(s)
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Selfie time?</button>
+      </form>
+
+        <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="bootstrap/js/bootstrap.js"></script>
+  <script type="text/javascript">
+  function showValue(newValue)
+  {
+    document.getElementById("rangePeople").innerHTML=newValue;
+  }
+  function showValueDrinks(newValue)
+  {
+    document.getElementById("rangeDrinks").innerHTML=newValue;
+  }
+  function showDuration(newValue)
+  {
+    document.getElementById("rangeDuration").innerHTML=newValue;
+  }
+  </script>
+</body>
+</html>
+</html>
